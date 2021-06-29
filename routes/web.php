@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * Students All Route
+ * Student Features
+ */
+
+Route::group(['namespace' => 'App\Http\Controllers', 'prefix' => 'student'], function (){
+    Route::get('/', 'StudentController@index') -> name('student.index');
+    Route::post('/store', 'StudentController@store') -> name('student.store');
+    Route::get('/all', 'StudentController@all') -> name('student.all');
+});
