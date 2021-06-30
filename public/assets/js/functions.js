@@ -18,3 +18,9 @@ function all_student(){
     });
 }
 all_student();
+
+//Single Data Show
+
+function single_data(id){
+
+}

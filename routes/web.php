@@ -26,4 +26,8 @@ Route::group(['namespace' => 'App\Http\Controllers', 'prefix' => 'student'], fun
     Route::get('/', 'StudentController@index') -> name('student.index');
     Route::post('/store', 'StudentController@store') -> name('student.store');
     Route::get('/all', 'StudentController@all') -> name('student.all');
+    Route::get('/show/{id}', 'StudentController@show') -> name('student.show');
+    Route::delete('/delete/{id}', 'StudentController@delete') -> name('student.delete');
+    Route::get('/edit/{id}', 'StudentController@edit') -> name('student.edit');
+    Route::post('/update/{id}', 'StudentController@update') -> name('student.update');
 });
